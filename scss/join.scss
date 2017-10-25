@@ -1,0 +1,233 @@
+.container-fluid{
+    .join{
+        padding-bottom: 20px;
+        text-align: center;
+        .img-control{           
+            position: relative;
+            .img-responsive{
+                margin-bottom: 30px;
+            }
+            .detail-mask{
+                text-align: center;
+                position: absolute;
+                top: 40px;
+                width: 100%;
+                color: #d62a3d;
+                font-family: "黑体";
+                span{
+//                  text-decoration: underline;
+                    display: inline-block;
+                    border-bottom: 1px solid #d62a3d;
+                    width: 80px;
+                    font-size: 44px;
+                    margin-bottom: 2px;
+                }
+                p{                    
+                    padding: 12px 14px 0 14px;
+                    font-size: 24px;
+                }
+            }
+        }
+    }
+    .join-flow{
+        .flow-list{
+            padding-top: 80px;
+            .mask-contorl{
+                text-align: center;
+                color: #221815;
+                height: 246px;
+                margin-bottom: 20px;
+                .flow-title{
+                    width: 100px;
+                    height: 100px;
+                    text-align: center;
+                    line-height: 100px;
+                    font-size: 36px;
+                    color: #d62a3d;
+                    margin: 0 auto;
+                    background: url(../img/join/liuc_bg.png);
+                }
+                span{
+                    font-size: 28px;
+                    display: inline-block;
+                    line-height: 60px;
+                }
+                p{
+                    font-size: 20px;
+                    padding-bottom: 20px;
+                }
+            }
+        }       
+    }
+     .contorl_run{
+//      background: #f0f1f3;
+        position: relative;
+        padding: 35px 0;
+        .img-scale{
+            overflow: hidden;
+            position: relative;  
+            padding: 0;          
+            .img-responsive{
+//              display: none;
+                top: 0;
+                left: 0;
+                transition: all ease-in-out 1.5s;                                 
+            }
+            .show{
+                display: block;
+            }
+            .hide{
+                display: none;
+            }
+            .img-responsive:hover{
+               transform: scale(1.1);
+            }           
+        }
+         .left_run,.right_run{
+            position: absolute;
+            cursor: pointer;
+            top: 50%;
+        }
+        .left_run{
+            left:5%;           
+            transform: translateY(-50%);
+        }
+        .right_run{
+            right: 5%;
+            transform: translateY(-50%);
+        }
+        .mask{
+            position: absolute;
+            bottom: 0;
+            background: rgba(0,0,0,.5);
+            width: 100%;
+            padding: 18px 20px 10px 70px;
+            span{
+                color:#d62a3d;
+                font-size: 25px;
+                padding-bottom: 18px;
+                display: inline-block;
+            }
+            p{
+                color: #fff;
+                font-size: 18px;
+                padding-bottom: 6px;
+            }
+        }
+    }
+    .run-ding{
+        padding-top: 0 0 50px 0;
+    }
+}
+//设配
+@media screen and (min-width:1251px){
+    .container-fluid {
+        .join{
+            .img-control{
+                .detail-mask{
+                    top: 45px;
+                    span{
+                        font-size: 48px;
+                    }
+                    p{
+                        font-size: 28px;
+                    }
+                }
+            }
+        }
+    }
+}
+@media screen and (min-width:992px)  and (max-width:1249px){
+    .container-fluid {
+        .join{
+            .img-control{
+                .detail-mask{
+                    
+                    span{
+                        font-size: 40px;
+                    }
+                    p{
+                        font-size: 20px;
+                    }
+                }
+            }
+        }
+    }
+}
+@media screen and (min-width:768px)  and (max-width:991px){
+    .container-fluid {
+        .join{
+            .img-control{
+                .detail-mask{
+                    top: 26px;
+                    span{
+                        font-size: 40px;
+                    }
+                    p{
+                        font-size: 20px;
+                    }
+                }
+            }
+        }
+    }
+} 
+@media screen and (max-width:767px){
+    .container-fluid {
+        .join{
+            .mask-contorl{
+                padding: 0 5px;
+                margin-bottom: 0px;
+                .img-control{
+                    .detail-mask{
+                        top: 14px;                 
+                        span{
+                            font-size: 20px;
+                        }
+                        p{
+                            font-size: 14px;
+                        }
+                    }
+                }
+            }           
+        }
+        .dian-show{
+            padding-top: 0;
+            padding-bottom: 10px;
+        }
+        .contorl_run{
+            padding-bottom: 90px;
+            padding-top: 0;
+            .mask{
+                padding: 10px 15px 5px 30px;
+                span{
+                    font-size: 15px;
+                    padding-bottom: 5px;
+                }
+                p{
+                    font-size: 12px;
+                    padding-bottom: 0;
+                }
+            } 
+            .left_run,.right_run{
+                display: none;
+            }          
+        }
+        
+    }
+}
+@media screen and (max-width:450px){ 
+    .container-fluid{
+        .join-flow{
+            .flow-list{
+                .mask-contorl{
+                   span{
+                       font-size: 20px;
+                   } 
+                   p{
+                       font-size: 14px;
+                   }
+                } 
+            }
+        }
+    }   
+}

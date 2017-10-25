@@ -1,0 +1,46 @@
+//列表点击
+var room_list=document.querySelectorAll(".dian-show span"),
+    img_show=document.querySelectorAll(".img-scale"),
+    left_run=document.querySelector(".left_run"),
+	right_run=document.querySelector(".right_run"),
+	index=0;
+	length=room_list.length,
+	is_run=false;
+	//列表切图
+	for(var i=0;i<length;i++){
+		room_list[i].index=i;
+		room_list[i].addEventListener("click",function(){
+			room_list[index].classList.remove("on-link");
+			img_show[index].classList.remove("show");
+			index=this.index;
+			room_list[index].classList.add("on-link");
+			img_show[index].classList.add("show");
+		})
+	}
+	//左切图
+	left_run.addEventListener("click",function(){
+		if(!is_run){
+			is_run=true;			
+			room_list[index].classList.remove("on-link");
+			img_show[index].classList.remove("show");
+			index--;
+			index=index<0?length-1:index;
+			room_list[index].classList.add("on-link");
+			img_show[index].classList.add("show");
+			is_run=false;
+		}
+	})
+	//右切
+	right_run.addEventListener("click",function(){
+		if(!is_run){
+			is_run=true;			
+			room_list[index].classList.remove("on-link");
+			img_show[index].classList.remove("show");
+			index++;
+			index=index%length;
+			room_list[index].classList.add("on-link");
+			img_show[index].classList.add("show");
+			is_run=false;
+		}
+	})
+//getElementsByClassName获取的是类数组

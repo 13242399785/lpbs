@@ -1,0 +1,370 @@
+@charset "utf-8";
+$color:#221815;
+$z-color:#d62a3d;
+
+.container-fluid{
+    //头部
+    .head{
+        background: #0d0d0d;
+        .header{    
+           padding: 0;
+           .icon-top{
+             padding: 16px 0;
+           }
+           .img-pad{
+               padding: 17px 0;
+           }
+            //导航条
+           .nav{           
+               float: right;               
+               ul{
+                   height: 100px;
+                   line-height: 100px;
+                   clear: both;
+                   float: right;                 
+                   li{                      
+                       float: left;
+                       color: $color;
+                       font-size: 15px;
+                       text-align: center;
+                       position: relative; 
+                       .on-link{
+                           color:$z-color;
+                       }               
+                       a{
+                           color: #fff;
+                           text-decoration: none;
+                           
+                       }
+                       a:hover{
+                            color:$z-color;                            
+                        }  
+                                              
+                       //二级菜单
+                       .er-hover{
+                           transition: all ease .5s; 
+                           background:rgba(214,42,21,.8);
+                           position: absolute;
+                           font-size: 15px;
+                           top: 72px;
+                           left: -16px;
+                           padding: 0;
+                           z-index: 9999;
+                           display: none;
+                           dl{
+                               padding: 10px 0;
+                               text-align: center;
+                               dd{
+                                  padding:8px 15px; 
+                                   a{
+                                       color: #000;                                     
+                                   }
+                                   a:hover{
+                                       color: #fff;
+                                   }
+                                   
+                               }
+                           }
+                       }               
+                   }
+                   li:hover>.er-hover{
+                        display: block;                         
+                    }
+                   .padd-r{
+                       padding-right: 30px;
+                   }            
+                   .padd{
+                       padding: 30px 0px 30px 40px;
+                   }           
+               }
+           }
+       }
+    }
+   
+   //尾部
+   .footer{
+       background:url(../img/big_map.jpg);
+        background-size:100% 100%;
+       position: relative;     
+       .mask{
+           background:rgba(0,0,0,.8);
+           margin: 0;
+           padding-bottom: 20px;
+           
+       }
+       .footer-nav{
+           text-align: center;
+           font-size: 16px;
+           height: 40px;
+           line-height: 40px;
+           margin-top: 20px;
+           span{
+               cursor: pointer;
+               a{
+                   color: #fff;
+                   text-decoration: none;
+               }
+               .jihuo{
+                   color: $z-color;
+               }
+           }
+           b{
+               display: inline-block;
+               height: 17px;
+               width: 2px;
+               background: #fff;
+               margin: 0 13px;
+              vertical-align: middle;
+           }         
+       }
+       .footer-link{
+           color: #fff;
+           padding:40px 0px 100px 30px;
+           .foot-detail{
+               h4{
+                   font-size: 26px;
+                   font-weight: bold;
+                   padding: 20px 0;
+               }
+               p{
+                   font-size: 16px;
+                   padding-bottom:14px;
+               }
+               .map{
+                   padding-top: 92px;
+                   position: relative;
+                   width: 260px;
+               }
+               .qr{
+                   position: absolute;
+                   left: -58px;
+                   top:120px;
+//                 display: block;
+//                 width: 100%;
+//                 height: auto;
+               }
+           }
+       }
+   }
+   .foot-wei{
+       background: $z-color;
+       text-align: center;
+       font-size: 14px;
+       color: #000;
+       padding: 15px 0;
+       a{
+           color: #000;
+           text-decoration: none;
+       }
+   }
+}
+//设配
+@media screen and (min-width:1250px){
+    .container-fluid {
+        .head{
+            .header{
+                .nav{
+                    ul{
+                        .padd-r{
+                            padding-right: 50px;
+                        }
+                    }       
+                }
+            } 
+        }
+        
+        .footer{
+            .footer-link{
+                .foot-detail{
+                    padding-left: 20px;
+                    h4{
+                        font-size: 24px;
+                        padding-top: 50px;
+                        padding-bottom: 35px;
+                        padding-left: 10px;
+                    }
+                    p{
+                        font-size:16px;
+                        padding-left: 10px;
+                    }
+                }
+            }
+        }    
+    }
+}
+@media screen and (min-width:992px) and (max-width:1136px) {
+    .container-fluid {
+        .header{
+            .nav{
+                ul{
+                    li{
+                        
+                    }
+                    .new-padd{
+                        
+                    }
+                }       
+            }
+        }     
+    }
+}
+@media screen and (min-width:768px) and (max-width:1250px) {
+    .container-fluid {
+        .head{
+            .header{
+                .img-pad{
+                    padding: 32px 0;
+                }
+                .nav{
+                    ul{
+                        li{
+    //                      padding-top: 25px;
+                        }
+                        .padd-r{
+                            padding-right:26px ;
+                        }
+                        .padd{
+                            padding: 30px 0px 30px 0px
+                        }
+                    } 
+                          
+                }
+            } 
+        }
+            
+    }
+}
+@media screen and (min-width:768px) and (max-width:2000px) {
+    .container-fluid {
+        .header{
+            .nav{
+                ul{
+                    .new-padd{
+//                      padding-right: 40px;
+                    }
+                }       
+            }
+        }     
+    }
+}
+@media screen and(max-width:767px) {
+    .container-fluid {
+        .head{
+           .header{
+                .nav{
+                    ul{
+                        height: 50px;
+                        line-height: 25px;
+                      .padd{
+                            display: none;
+                        } 
+                        .padd-r{
+                            padding-right:20px ;
+                            .er-hover{
+                                display: none;
+                            }
+                        } 
+                        li{
+                            font-size: 12px;
+                        }            
+                    }                
+                }
+                .navbar-nav{
+                    margin-top: 0;
+                    margin-bottom: 0;
+                    padding-bottom: 15px;
+                }
+                
+            }   
+        } 
+        .common-tou{
+            .title-img{
+                height: 35px;
+            }
+        }           
+        .footer{
+            background: url(../img/map.jpg) no-repeat center;
+            background-size:cover;
+            .footer-link{
+                padding: 20px 10px;
+                .foot-detail{
+                    .icon-bottom{
+                        display: none;
+                    } 
+                    h4,p{
+                        text-align: center;
+                    }
+                    .map-company{
+                        .img-responsive{
+                            display: none;
+                        }
+                        .qr{
+                            position: relative;
+                            display: block;
+                            width: 100%;
+                            height: auto;
+                            top: 0;
+                            left: 0;
+                            padding: 30px 80px;
+                        }
+                    }
+                }
+            }           
+        } 
+        .foot-wei{
+            font-size: 12px;
+        }
+        .run-ding{
+            display: none;
+        }                  
+    }
+}
+@media screen and(max-width:412px) {
+    .container-fluid {
+        .head{
+            .header{
+                .nav{
+                    ul{
+                        li{
+                            padding-top: 10px;
+                            font-size: 14px;
+                            .er-hover{
+                                top: 40px;
+                                left: -10px;
+                                dl{
+                                    dd{
+                                        padding: 10px 8px;
+                                    }
+                                }
+                            }
+                        }
+                        .padd{
+                            font-size: 14px;
+                            padding-right: 13px;
+                        }
+                        .padd-r{
+                            padding-right: 13px;
+                        }
+                    }                
+                }
+            }
+        }      
+        .footer{
+            .footer-nav{
+                span{
+                    font-size: 14px;
+                }
+            }
+            .footer-link{
+                .foot-detail{
+                    h4{
+                        font-size: 20px;
+                    }
+                    p{
+                        font-size: 14px;
+                    }
+                }
+            }
+        }          
+    }
+}

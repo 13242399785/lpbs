@@ -1,0 +1,71 @@
+.container-fluid{
+    .join-equity{
+        padding-bottom: 60px;
+        .hang{
+            padding: 0 52px;
+            height: 62px;
+            line-height: 62px;
+            font-size: 25px;
+            margin-bottom: 26px;
+            .quan-left{  
+                width: 167px; 
+                height: 62px;              
+                background: url(../img/other/huidi.png) no-repeat;          
+                text-align: center;
+                color: #fff;
+            }
+            .quan-right{              
+                color: #3e3a39;
+                background: #e4e4e4;
+            }
+        }
+    }
+    .agency{
+        padding: 50px 0 40px 0;
+        .agency-title{
+            padding-bottom: 28px;
+            span{
+                display: inline-block;
+                font-size: 25px;
+                color: #fff;
+                background: #d62a3d;
+                padding: 16px 22px;
+            }
+        }               
+        .agency-detail{
+            padding: 20px 0 22px 0;
+            color: #3e3a39;
+            p{
+                font-size: 18px;
+                padding-bottom: 16px;
+                text-align: justify;               
+            }
+        }
+    }
+}
+@media screen and (max-width:767px){
+    .container-fluid{
+        .agency{
+             padding: 0px 0 60px 0;
+            .agency-title{
+                text-align: center;
+                span{
+                    font-size: 20px;
+                    padding: 6px 20px;
+                }
+            }
+            .agency-detail{
+                padding: 20px 10px 10px 10px;
+                p{
+                    font-size: 16px;
+                }
+            }
+        }
+        .join-equity{
+            padding-bottom: 10px;
+        }
+        .common-tou{
+            padding: 30px 0;
+        }
+    }
+}
